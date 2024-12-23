@@ -1,0 +1,150 @@
+body {
+  font-family: "Inter";
+  background-color: #f2f3f6;
+  color: #1b1d20;
+  max-width: 450px;
+  padding: 20px;
+  margin: 0 auto;
+  line-height: 26px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: #374151;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field strong {
+  margin-bottom: 8px;
+  display: block;
+}
+
+form {
+  margin-top: 36px;
+}
+
+input {
+  display: block;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #d1d5dc;
+  font-family: monospace;
+}
+
+.output {
+  margin-top: 40px;
+  padding: 0 13px;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+#output {
+  overflow: scroll;
+}
+
+#error {
+  color: red;
+  display: none;
+}
+
+#radio-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (max-width: 490px) {
+  #radio-buttons {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 14px 16px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid #d1d5dc;
+}
+
+.container input {
+  position: absolute;
+  visibility: hidden;
+  cursor: pointer;
+  width: auto;
+}
+
+.checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.1s;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #d1d5dc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
