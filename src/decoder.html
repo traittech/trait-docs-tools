@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="decode.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <title>Address Decoder | TRAIT Docs</title>
+    <meta name="description" content="Example of how to decode an address." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Address Decoder</h1>
+    <p>Enter your address to decode it.</p>
+
+    <form id="form">
+      <div class="field">
+        <label for="address"><strong>Keyless address</strong></label>
+        <input type="text" id="address" name="address" required />
+      </div>
+
+      <button type="submit">Decode Address</button>
+    </form>
+
+    <p id="error">Entered address is not valid.</p>
+
+    <div class="output" id="outputContainer" style="display: none">
+      <h2>Attributes of keyless address</h2>
+      <pre id="output"></pre>
+    </div>
+  </body>
+</html>
